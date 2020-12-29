@@ -9,13 +9,15 @@ import { LoginComponent } from './login/login.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     TermsAndConditionsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
       {path : '', component : LoginComponent},
       {path : 'terms-and-conditions', component : TermsAndConditionsComponent},
       {path : 'privacy-policy', component : PrivacyPolicyComponent},
+      {path : 'signup', component : SignupComponent},
+      {path : 'login', component : LoginComponent},
+      {path : '**', component : PageNotFoundComponent},
     ]),
   ],
   providers: [],
