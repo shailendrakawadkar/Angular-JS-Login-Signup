@@ -2,34 +2,33 @@
     <form #signupForm="ngForm">
         <h3 class="text-center">Signup</h3>
         <div class="form-group ">
-            <label class="form-label ">Your Name</label>
-            <input class="form-control " type="text " name="user_name " #user_name="ngModel" ngModel required>
+            <input placeholder="Your Name" class="form-control border-top-0 border-left-0 border-right-0 border-bottom-2 rounded-0" type="text " name="user_name " #user_name="ngModel" ngModel required>
             <span class="form-text text-danger " *ngIf="user_name.touched && !user_name.valid ">Please enter valid name.</span>
         </div>
 
         <div class="form-group ">
-            <label class="form-label ">Mobile</label>
-            <input class="form-control " type="tel " name="user_mob " #user_mob="ngModel" ngModel required minlength="10 ">
+
+            <input placeholder="Mobile" class="form-control border-top-0 border-left-0 border-right-0 border-bottom-2 rounded-0" type="tel " name="user_mob " #user_mob="ngModel" ngModel required minlength="10 ">
             <span class="form-text text-danger " *ngIf="user_mob.touched && !user_mob.valid ">Please enter valid Mobile Number.</span>
         </div>
 
         <div class="form-group ">
-            <label class="form-label ">Password</label>
-            <input class="form-control " type="password " name="user_pass " #user_pass="ngModel" ngModel required>
+
+            <input placeholder="Password" class="form-control border-top-0 border-left-0 border-right-0 border-bottom-2 rounded-0" type="password" name="user_pass " #user_pass="ngModel" ngModel required>
             <span class="form-text text-danger " *ngIf="user_pass.touched && !user_pass.valid ">Please enter valid password.</span>
         </div>
 
         <div class="form-group ">
-            <label class="form-label ">Re-Type Password</label>
-            <input class="form-control " type="password " name="user_repass " #user_repass="ngModel" ngModel required>
+
+            <input placeholder="Re-Type Password" class="form-control border-top-0 border-left-0 border-right-0 border-bottom-2 rounded-0" type="password" name="user_repass " #user_repass="ngModel" ngModel required>
             <span class="form-text text-danger " *ngIf="user_repass.touched && !user_repass.valid ">Password Mismatch.</span>
         </div>
 
-        <div class="form-group ">
-            <input class="form-check " type="checkbox " name="user_check " #user_check="ngModel" ngModel required>
-            <label class="form-label ">  I agree to Terms & Conditions</label>
-            <span class="form-text text-danger " *ngIf="!user_check.valid ">Please accept terms and conditions.</span>
+        <div>
+            <input type="checkbox" required name="user_check" #user_check="ngModel" ngModel>&nbsp;
+            <label> I agree to Terms & Conditions</label>
         </div>
+
         <div class="text-center ">
             <input type="button " [ngClass]="!signupForm.valid ? 'btn btn-secondary w-50' : 'btn btn-primary w-50' " [disabled]="!signupForm.valid " value="Continue ">
         </div>
