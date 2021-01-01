@@ -24,14 +24,6 @@ import { SignupComponent } from './signup/signup.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    RouterModule.forRoot([
-      {path : '', component : LoginComponent},
-      {path : 'terms-and-conditions', component : TermsAndConditionsComponent},
-      {path : 'privacy-policy', component : PrivacyPolicyComponent},
-      {path : 'signup', component : SignupComponent},
-      {path : 'login', component : LoginComponent},
-      {path : '**', component : PageNotFoundComponent},
-    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
